@@ -1,5 +1,10 @@
-/car_pictures
+/car_pictures/
+/css/*
 */css
+/font-awesome/
 */font-awesome
-*/fonts
+/fonts/*
+*/fonts/
 config.php
+admin/js/*
+js/*
