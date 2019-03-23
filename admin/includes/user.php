@@ -27,6 +27,29 @@ class User {
 	}
 
 
+	public static function instantiateObject($the_record) {
+		$user_object = new self;
+
+		foreach ($the_record as $the_attribute => $value) {
+
+			if($user_object->has_the_attribute($the_attribute)) {
+				$user_object->the_attribute = $value;
+			}
+
+		}
+
+		return $user_object;
+	}
+
+
+
+
+	private function has_the_attribute($the_attribute) {
+		$object_properties = get_object_vars($this);
+		return array_key_exists($the_attribute, $object_properties);
+	}
+
+
 
 }
 
